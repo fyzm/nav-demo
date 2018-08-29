@@ -8,7 +8,7 @@
 <body>
   <header></header>
   <main>
-    <div id = "mainXXXX"></div>
+    <div id = "main"></div>
   </main>
   <footer></footer>
   <script>
@@ -39,8 +39,9 @@
     }
     index = 0
     while(index < keys.length){
-      divXXXX = document.createElement('div')
-      mainXXXX.appendChild(divXXXX)
+      div = document.createElement('div')
+      main.appendChild(div)
+      div.className = 'row'
       row = keys[index]
       hashLocalStorage = JSON.parse(localStorage.getItem('zz') || 'null')
       if(hashLocalStorage){
@@ -48,19 +49,20 @@
       }
       index1 = 0
       while(index1 < row.length){
-        kbdXXXX = document.createElement('kbd')
-        kbdXXXX.textContent = row[index1]
-        buttonX = document.createElement('button')
-        buttonX.textContent = '编辑'
-        buttonX.id = row[index1]
-        buttonX.onclick = function(xzkjcnxlkcjlk){
+        kbd = document.createElement('kbd')
+        kbd.textContent = row[index1]
+        kbd.className = 'key'
+        button = document.createElement('button')
+        button.textContent = '编辑'
+        button.id = row[index1]
+        button.onclick = function(xzkjcnxlkcjlk){
           key = xzkjcnxlkcjlk.target.id
           x = prompt('请给我一个网址')
           hash[key] = x
           localStorage.setItem('zz',JSON.stringify(hash))
         }
-        kbdXXXX.appendChild(buttonX)
-        divXXXX.appendChild(kbdXXXX)
+        kbd.appendChild(button)
+        div.appendChild(kbd)
         index1 = index1 + 1
       }
       index = index + 1
