@@ -42,7 +42,7 @@
       divXXXX = document.createElement('div')
       mainXXXX.appendChild(divXXXX)
       row = keys[index]
-      hashLocalStorage = JSON.parse(localStorage.getItem('zz') || '')
+      hashLocalStorage = JSON.parse(localStorage.getItem('zz') || 'null')
       if(hashLocalStorage){
         hash = hashLocalStorage
       }
