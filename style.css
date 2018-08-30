@@ -14,8 +14,18 @@ kbd:hover > button{
 }
 body{
   height: 100vh;
-  background: grey url(./wall.jpg) center center no-repeat;
+  background: grey url(./images/wall.jpg) center center no-repeat;
   background-size: cover;
+}
+header{
+  background: black;
+  padding: 46px 0;
+  position: relative;
+}
+header > img{
+  position: absolute;
+  margin-top:-41px;
+  left:511px;
 }
 main{
   text-align: center;
