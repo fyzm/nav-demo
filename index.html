@@ -9,15 +9,22 @@
 
 <body>
   <header>
-    <img src="./images/cartoon.jpg" alt="logo">
-    <form action="">
-
-    </form>
+    <div class="logo">
+      <img src="./images/cartoon.jpg" alt="logo">
+    </div>
+    <div id="serach">
+      <form name="s" action="" class="clearfix">
+        <input type="text" name="wd" id="q" autocomplete="off" value>
+        <input type="button" id="button" onclick="window.open('http://www.google.com/search?q=' + s.wd.value,'')" value="谷歌搜索">
+      </form>
+    </div>
   </header>
   <main>
     <div id="main" class="wrapper"></div>
   </main>
-  <footer></footer>
+  <footer>
+
+  </footer>
   <script>
 
     //初始化数据
@@ -27,7 +34,7 @@
 
     //生成键盘
     generateKeyboard(keys, hash)
-    
+
     //监听键盘
     listenToUser(hash)
 
